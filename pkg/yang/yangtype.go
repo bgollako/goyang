@@ -161,6 +161,14 @@ var (
 			Name: "instance-identifier",
 			Kind: YinstanceIdentifier,
 		},
+		"exa:STRING": {
+			Name: "exa:STRING",
+			Kind: Ystring,
+		},
+		"exa:UINT16": {
+			Name: "exa:UINT16",
+			Kind: Yuint16,
+		},
 	}
 )
 
