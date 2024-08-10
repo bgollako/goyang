@@ -70,6 +70,11 @@ func (d *typeDictionary) findExternal(n Node, prefix, name string) (*Typedef, er
 	if td := d.find(root, name); td != nil {
 		return td, nil
 	}
+	for _, sm := range root.Modules.SubModules {
+		if td := d.find(sm, name); td != nil {
+			return td, nil
+		}
+	}
 	if prefix != "" {
 		name = prefix + ":" + name
 	}
